@@ -53,7 +53,9 @@ with open(path) as csvfile:
         else:
             clean_dict[row[STATE_NAME]] = {row[COUNTY_NAME]: {map_name(row[DATA_ITEM]): current_value}}
             
-print(clean_dict["ALASKA"])
+#print(clean_dict["ALASKA"])
+with open("raw_data/cleaned_agdata.json", "w") as f:
+    json.dump(clean_dict,f,indent=4)
 
 state_totals = {}
 for state in clean_dict:
@@ -64,8 +66,9 @@ for state in clean_dict:
                 total_acres += clean_dict[state][county][data]
     state_totals[state] = total_acres
 
-print(len(state_totals))
-print(state_totals.keys())
+# print(len(state_totals))
+# print(state_totals.keys())
+
 '''path = "raw_data/stateLevelGeo.json"
 output_path = "raw_data/acres_stateLevelGeo.json"
 with open(path, 'r') as f:
@@ -77,3 +80,5 @@ with open(path, 'r') as f:
 with open(output_path, 'w') as f:
     json.dump(data,f,indent=4)
 '''
+
+# massachutes, conneticut, vermont, new hampshire, rhode island
