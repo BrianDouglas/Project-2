@@ -54,8 +54,8 @@ with open(path) as csvfile:
             clean_dict[row[STATE_NAME]] = {row[COUNTY_NAME]: {map_name(row[DATA_ITEM]): current_value}}
             
 #print(clean_dict["ALASKA"])
-with open("raw_data/cleaned_agdata.json", "w") as f:
-    json.dump(clean_dict,f,indent=4)
+'''with open("raw_data/cleaned_agdata.json", "w") as f:
+    json.dump(clean_dict,f,indent=4)'''
 
 state_totals = {}
 for state in clean_dict:
@@ -65,7 +65,7 @@ for state in clean_dict:
             if data.split("_")[1] == 'acres':
                 total_acres += clean_dict[state][county][data]
     state_totals[state] = total_acres
-
+print(state_totals)
 # print(len(state_totals))
 # print(state_totals.keys())
 
