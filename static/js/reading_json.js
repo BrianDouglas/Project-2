@@ -5,6 +5,17 @@ source_file = "/raw_data/cleaned_agdata.json"
 //the data once we've received it.
 d3.json(source_file).then(data => {
     console.log(data["ALABAMA"]);
+    states = [];
+    for (var state in data){
+        states.push(state);
+    }
+    console.log(states);
+
+    counties = []
+    for (var county in data["ALABAMA"]){
+        counties.push(county);
+    }
+    console.log(counties);
 });
 
 //Note: You won't be able to read the file unless you're using a localhost
