@@ -1,0 +1,1 @@
+const API_KEY = "pk.eyJ1Ijoia2xkdWR6aW5za3kiLCJhIjoiY2tsOHgxdzllMDFzZzJvandudGE0Y2wxbCJ9.0q3IioDBDXvwW0HLqGrolA"
