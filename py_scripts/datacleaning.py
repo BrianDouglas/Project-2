@@ -33,23 +33,20 @@ with open(path) as csvfile:
     count = 1
     next(reader)
     for row in reader:
-        # if count > 8:
-        #     count = 1
-        # if count%2 == 0:
-        #     count += 1
-        #     continue
-        # else:
         if row[DATA_ITEM] not in discover_data:
             discover_data.append(row[DATA_ITEM])
         try:
             current_value = int(row[VALUE].replace(",",""))
         except:
             current_value = 0
+
         if row[STATE_NAME] in clean_dict:
+
             if row[COUNTY_NAME] in clean_dict[row[STATE_NAME]]:
                 clean_dict[row[STATE_NAME]][row[COUNTY_NAME]][map_name(row[DATA_ITEM])] = current_value 
             else:
                 clean_dict[row[STATE_NAME]][row[COUNTY_NAME]] = {map_name(row[DATA_ITEM]): current_value}
+        
         else:
             clean_dict[row[STATE_NAME]] = {row[COUNTY_NAME]: {map_name(row[DATA_ITEM]): current_value}}
             
@@ -80,5 +77,3 @@ with open(path, 'r') as f:
 with open(output_path, 'w') as f:
     json.dump(data,f,indent=4)
 '''
-
-# massachutes, conneticut, vermont, new hampshire, rhode island

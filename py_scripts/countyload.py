@@ -26,10 +26,6 @@ with open(geo_path, 'r') as geo_f:
     for feature in geo_data["features"]:
         cur_id = feature["properties"]["STATE"]
         cur_county = feature["properties"]["NAME"].upper()
-        # print(cur_id)
-        # print(cur_county)
-        # print(id_county_acres[cur_id])
-        # break
         if cur_id in id_county_acres:
             if cur_county in id_county_acres[cur_id]:
                 count += 1
