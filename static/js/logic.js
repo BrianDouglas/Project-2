@@ -1,4 +1,3 @@
-
 // states Map map object
 var myMap = L.map("map", {
     center: [38, -96],
@@ -12,6 +11,9 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     id: "mapbox/light-v9",
     accessToken: API_KEY
 }).addTo(myMap);
+
+
+var object = [];
 
 //all feature function 
 function all_features(jsonData) {
@@ -30,10 +32,11 @@ function all_features(jsonData) {
             layer.on({
                 mouseover: function (event) {
                     layer = event.target;
+                    layer.bindTooltip("<h1>" + feature.properties.NAME + "</h1>" + "<hr></hr>" + "<h2>" + feature.properties.ACRES + "</h2").openTooltip();
                     layer.setStyle({
                         fillOpacity: 0.3
                     });
-                    
+
                 },
                 mouseout: function (event) {
                     layer = event.target;
@@ -48,48 +51,51 @@ function all_features(jsonData) {
             });
         }
 
-    }).addTo(myMap);
+    });
+    return geoJson
 }
 
-
 //state acre info
-//state_path = "raw_data/acres_stateLevelGeo.json";
-state_path = "/state_geo"
-d3.json(state_path, function (data) {
-    all_features(data)
-    var legend = L.control({ position: "bottomright" });
-    //legend 
-    legend.onAdd = function () {
-        var div = L.DomUtil.create("div", "info legend");
-        var limits = geojson.options.limits;
-        var colors = geojson.options.colors;
-        var labels = [];
-
-        var legendInfo = "<h1>State Total Acres</h1>" +
-            "<div class=\"labels\">" +
-            "<div class=\"min\"> Min: " + limits[0] + "</div>" +
-            "<div class=\"max\"> Max: " + limits[limits.length - 1] + "</div>" +
-            "</div>";
-        div.innerHTML = legendInfo;
-
-        limits.forEach(function (limit, index) {
-            labels.push("<li style=\"background-color: " + colors[index] + "\"> </li>")
-
-        });
-        div.innerHTML += "<ul>" + labels.join("") + "</ul>";
-
-        return div;
-
-    };
-    legend.addTo(myMap);
-
+d3.json("raw_data/acres_stateLevelGeo.json", function (data) {
+    object.push(all_features(data))
 })
-
-//county_path = "raw_data/countyLevelGeo.json"
-county_path = "/county_geo"
-d3.json(county_path,function(county_data){
-    all_features(county_data)
+d3.json("raw_data/countyLevelGeo.json", function (county_data) {
+    object.push(all_features(county_data))
 })
 // d3.json("raw_data/countyLevelGeo.json", function(county_map){
 //     L.geoJson(county_map).addTo(myMap)
 // })
+var overlayMaps = {
+    State: object[0],
+    County: object[1]
+};
+
+L.control.layers(overlayMaps, {
+    collapsed: false
+}).addTo(myMap);
+
+var legend = L.control({ position: "bottomright" });
+//legend 
+legend.onAdd = function () {
+    var div = L.DomUtil.create("div", "info legend");
+    var limits = geojson.options.limits;
+    var colors = geojson.options.colors;
+    var labels = [];
+
+    var legendInfo = "<h1>State Total Acres</h1>" +
+        "<div class=\"labels\">" +
+        "<div class=\"min\"> Min: " + limits[0] + "</div>" +
+        "<div class=\"max\"> Max: " + limits[limits.length - 1] + "</div>" +
+        "</div>";
+    div.innerHTML = legendInfo;
+
+    limits.forEach(function (limit, index) {
+        labels.push("<li style=\"background-color: " + colors[index] + "\"> </li>")
+
+    });
+    div.innerHTML += "<ul>" + labels.join("") + "</ul>";
+
+    return div;
+
+};
+legend.addTo(myMap);
