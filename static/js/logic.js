@@ -53,7 +53,9 @@ function all_features(jsonData) {
 
 
 //state acre info
-d3.json("raw_data/acres_stateLevelGeo.json", function (data) {
+//state_path = "raw_data/acres_stateLevelGeo.json";
+state_path = "/state_geo"
+d3.json(state_path, function (data) {
     all_features(data)
     var legend = L.control({ position: "bottomright" });
     //legend 
@@ -82,7 +84,10 @@ d3.json("raw_data/acres_stateLevelGeo.json", function (data) {
     legend.addTo(myMap);
 
 })
-d3.json("raw_data/countyLevelGeo.json",function(county_data){
+
+//county_path = "raw_data/countyLevelGeo.json"
+county_path = "/county_geo"
+d3.json(county_path,function(county_data){
     all_features(county_data)
 })
 // d3.json("raw_data/countyLevelGeo.json", function(county_map){

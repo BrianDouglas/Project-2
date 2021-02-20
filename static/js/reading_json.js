@@ -1,5 +1,5 @@
 //string holding path to json file
-source_file = "/raw_data/cleaned_agdata.json"
+source_file = "/ag_data"
 //d3.json() makes a promise to do something after the file is retrieved.
 //that's why we use the .then() to add a function to do something with
 //the data once we've received it.
