@@ -85,3 +85,6 @@ d3.json("raw_data/acres_stateLevelGeo.json", function (data) {
 d3.json("raw_data/countyLevelGeo.json",function(county_data){
     all_features(county_data)
 })
+d3.json("raw_data/countyLevelGeo.json", function(county_map){
+    L.geoJson(county_map).addTo(myMap)
+})
