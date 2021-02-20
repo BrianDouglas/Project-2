@@ -669,7 +669,8 @@
             "woodland_ops": 203,
             "wood-pasture_acres": 4158,
             "wood-pasture_ops": 71
-        }
+        },
+        "id": "01"
     },
     "ALASKA": {
         "KENAI PENINSULA": {
@@ -719,7 +720,8 @@
             "woodland_ops": 128,
             "wood-pasture_acres": 764,
             "wood-pasture_ops": 25
-        }
+        },
+        "id": "02"
     },
     "ARIZONA": {
         "APACHE": {
@@ -863,7 +865,8 @@
             "crop_ops": 369,
             "pasture_acres": 0,
             "pasture_ops": 82
-        }
+        },
+        "id": "04"
     },
     "ARKANSAS": {
         "CONWAY": {
@@ -1613,7 +1616,8 @@
             "woodland_ops": 388,
             "wood-pasture_acres": 12656,
             "wood-pasture_ops": 218
-        }
+        },
+        "id": "05"
     },
     "CALIFORNIA": {
         "ALAMEDA": {
@@ -2187,7 +2191,8 @@
             "woodland_ops": 79,
             "wood-pasture_acres": 4283,
             "wood-pasture_ops": 16
-        }
+        },
+        "id": "06"
     },
     "COLORADO": {
         "ADAMS": {
@@ -2809,7 +2814,8 @@
             "woodland_ops": 53,
             "wood-pasture_acres": 8553,
             "wood-pasture_ops": 35
-        }
+        },
+        "id": "08"
     },
     "DELAWARE": {
         "KENT": {
@@ -2841,7 +2847,8 @@
             "woodland_ops": 460,
             "wood-pasture_acres": 1365,
             "wood-pasture_ops": 37
-        }
+        },
+        "id": "10"
     },
     "FLORIDA": {
         "ALACHUA": {
@@ -3509,7 +3516,8 @@
             "woodland_ops": 80,
             "wood-pasture_acres": 18773,
             "wood-pasture_ops": 45
-        }
+        },
+        "id": "12"
     },
     "GEORGIA": {
         "BALDWIN": {
@@ -5099,7 +5107,8 @@
             "woodland_ops": 140,
             "wood-pasture_acres": 3344,
             "wood-pasture_ops": 76
-        }
+        },
+        "id": "13"
     },
     "HAWAII": {
         "HAWAII": {
@@ -5141,7 +5150,8 @@
             "woodland_ops": 48,
             "wood-pasture_acres": 2257,
             "wood-pasture_ops": 17
-        }
+        },
+        "id": "15"
     },
     "IDAHO": {
         "BANNOCK": {
@@ -5581,7 +5591,8 @@
             "woodland_ops": 22,
             "wood-pasture_acres": 0,
             "wood-pasture_ops": 13
-        }
+        },
+        "id": "16"
     },
     "ILLINOIS": {
         "DE WITT": {
@@ -6603,7 +6614,8 @@
             "woodland_ops": 150,
             "wood-pasture_acres": 1833,
             "wood-pasture_ops": 51
-        }
+        },
+        "id": "17"
     },
     "INDIANA": {
         "BARTHOLOMEW": {
@@ -7525,7 +7537,8 @@
             "woodland_ops": 202,
             "wood-pasture_acres": 1329,
             "wood-pasture_ops": 37
-        }
+        },
+        "id": "18"
     },
     "IOWA": {
         "BOONE": {
@@ -8517,7 +8530,8 @@
             "woodland_ops": 183,
             "wood-pasture_acres": 3417,
             "wood-pasture_ops": 69
-        }
+        },
+        "id": "19"
     },
     "KANSAS": {
         "BARTON": {
@@ -9545,7 +9559,8 @@
             "woodland_ops": 1,
             "wood-pasture_acres": 0,
             "wood-pasture_ops": 1
-        }
+        },
+        "id": "20"
     },
     "KENTUCKY": {
         "ANDERSON": {
@@ -10747,7 +10762,8 @@
             "woodland_ops": 285,
             "wood-pasture_acres": 4907,
             "wood-pasture_ops": 112
-        }
+        },
+        "id": "21"
     },
     "LOUISIANA": {
         "AVOYELLES": {
@@ -11385,7 +11401,8 @@
             "woodland_ops": 212,
             "wood-pasture_acres": 3011,
             "wood-pasture_ops": 105
-        }
+        },
+        "id": "22"
     },
     "MAINE": {
         "HANCOCK": {
@@ -11547,7 +11564,8 @@
             "woodland_ops": 484,
             "wood-pasture_acres": 2449,
             "wood-pasture_ops": 133
-        }
+        },
+        "id": "23"
     },
     "MARYLAND": {
         "DORCHESTER": {
@@ -11779,7 +11797,8 @@
             "woodland_ops": 459,
             "wood-pasture_acres": 3413,
             "wood-pasture_ops": 143
-        }
+        },
+        "id": "24"
     },
     "MICHIGAN": {
         "CLARE": {
@@ -12611,7 +12630,8 @@
             "woodland_ops": 349,
             "wood-pasture_acres": 1377,
             "wood-pasture_ops": 62
-        }
+        },
+        "id": "26"
     },
     "MINNESOTA": {
         "BENTON": {
@@ -13481,7 +13501,8 @@
             "woodland_ops": 104,
             "wood-pasture_acres": 834,
             "wood-pasture_ops": 35
-        }
+        },
+        "id": "27"
     },
     "MISSISSIPPI": {
         "ATTALA": {
@@ -14303,7 +14324,8 @@
             "woodland_ops": 28,
             "wood-pasture_acres": 0,
             "wood-pasture_ops": 3
-        }
+        },
+        "id": "28"
     },
     "MISSOURI": {
         "BENTON": {
@@ -15441,7 +15463,8 @@
             "woodland_ops": 575,
             "wood-pasture_acres": 14859,
             "wood-pasture_ops": 301
-        }
+        },
+        "id": "29"
     },
     "MONTANA": {
         "BROADWATER": {
@@ -15999,7 +16022,8 @@
             "woodland_ops": 29,
             "wood-pasture_acres": 0,
             "wood-pasture_ops": 28
-        }
+        },
+        "id": "30"
     },
     "NEBRASKA": {
         "BUFFALO": {
@@ -16921,7 +16945,8 @@
             "woodland_ops": 47,
             "wood-pasture_acres": 273,
             "wood-pasture_ops": 15
-        }
+        },
+        "id": "31"
     },
     "NEVADA": {
         "ELKO": {
@@ -17071,7 +17096,8 @@
             "woodland_ops": 5,
             "wood-pasture_acres": 0,
             "wood-pasture_ops": 4
-        }
+        },
+        "id": "32"
     },
     "NEW JERSEY": {
         "BURLINGTON": {
@@ -17281,7 +17307,8 @@
             "woodland_ops": 368,
             "wood-pasture_acres": 382,
             "wood-pasture_ops": 47
-        }
+        },
+        "id": "34"
     },
     "NEW MEXICO": {
         "COLFAX": {
@@ -17597,7 +17624,8 @@
             "woodland_ops": 17,
             "wood-pasture_acres": 12482,
             "wood-pasture_ops": 15
-        }
+        },
+        "id": "35"
     },
     "NEW YORK": {
         "CAYUGA": {
@@ -18183,7 +18211,8 @@
             "woodland_ops": 553,
             "wood-pasture_acres": 1088,
             "wood-pasture_ops": 68
-        }
+        },
+        "id": "36"
     },
     "NORTH CAROLINA": {
         "BEAUFORT": {
@@ -19185,7 +19214,8 @@
             "woodland_ops": 254,
             "wood-pasture_acres": 4624,
             "wood-pasture_ops": 131
-        }
+        },
+        "id": "37"
     },
     "NORTH DAKOTA": {
         "EDDY": {
@@ -19709,7 +19739,8 @@
             "woodland_ops": 22,
             "wood-pasture_acres": 3686,
             "wood-pasture_ops": 8
-        }
+        },
+        "id": "38"
     },
     "OHIO": {
         "DELAWARE": {
@@ -20591,7 +20622,8 @@
             "woodland_ops": 374,
             "wood-pasture_acres": 175,
             "wood-pasture_ops": 23
-        }
+        },
+        "id": "39"
     },
     "OKLAHOMA": {
         "CANADIAN": {
@@ -21361,7 +21393,8 @@
             "woodland_ops": 61,
             "wood-pasture_acres": 3327,
             "wood-pasture_ops": 26
-        }
+        },
+        "id": "40"
     },
     "OREGON": {
         "GILLIAM": {
@@ -21723,7 +21756,8 @@
             "woodland_ops": 270,
             "wood-pasture_acres": 1235,
             "wood-pasture_ops": 91
-        }
+        },
+        "id": "41"
     },
     "PENNSYLVANIA": {
         "BLAIR": {
@@ -22391,7 +22425,8 @@
             "woodland_ops": 372,
             "wood-pasture_acres": 1539,
             "wood-pasture_ops": 123
-        }
+        },
+        "id": "42"
     },
     "SOUTH CAROLINA": {
         "CALHOUN": {
@@ -22853,7 +22888,8 @@
             "woodland_ops": 401,
             "wood-pasture_acres": 5168,
             "wood-pasture_ops": 186
-        }
+        },
+        "id": "45"
     },
     "SOUTH DAKOTA": {
         "AURORA": {
@@ -23511,7 +23547,8 @@
             "woodland_ops": 16,
             "wood-pasture_acres": 0,
             "wood-pasture_ops": 7
-        }
+        },
+        "id": "46"
     },
     "TENNESSEE": {
         "BEDFORD": {
@@ -24463,7 +24500,8 @@
             "woodland_ops": 482,
             "wood-pasture_acres": 10816,
             "wood-pasture_ops": 242
-        }
+        },
+        "id": "47"
     },
     "TEXAS": {
         "BELL": {
@@ -26949,7 +26987,8 @@
             "woodland_ops": 215,
             "wood-pasture_acres": 16997,
             "wood-pasture_ops": 159
-        }
+        },
+        "id": "48"
     },
     "UTAH": {
         "JUAB": {
@@ -27241,7 +27280,8 @@
             "woodland_ops": 11,
             "wood-pasture_acres": 0,
             "wood-pasture_ops": 5
-        }
+        },
+        "id": "49"
     },
     "VIRGINIA": {
         "ALBEMARLE": {
@@ -28215,7 +28255,8 @@
             "woodland_ops": 519,
             "wood-pasture_acres": 9051,
             "wood-pasture_ops": 207
-        }
+        },
+        "id": "51"
     },
     "WASHINGTON": {
         "BENTON": {
@@ -28605,7 +28646,8 @@
             "woodland_ops": 553,
             "wood-pasture_acres": 1452,
             "wood-pasture_ops": 149
-        }
+        },
+        "id": "53"
     },
     "WEST VIRGINIA": {
         "BERKELEY": {
@@ -29153,7 +29195,8 @@
             "woodland_ops": 9,
             "wood-pasture_acres": 0,
             "wood-pasture_ops": 1
-        }
+        },
+        "id": "54"
     },
     "WISCONSIN": {
         "ADAMS": {
@@ -29871,7 +29914,8 @@
             "woodland_ops": 880,
             "wood-pasture_acres": 11461,
             "wood-pasture_ops": 247
-        }
+        },
+        "id": "55"
     },
     "WYOMING": {
         "CAMPBELL": {
@@ -30103,6 +30147,7 @@
             "woodland_ops": 47,
             "wood-pasture_acres": 16964,
             "wood-pasture_ops": 32
-        }
+        },
+        "id": "56"
     }
 }
