@@ -1,4 +1,3 @@
-
 // states Map map object
 var myMap = L.map("map", {
     center: [38, -96],
