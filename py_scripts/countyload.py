@@ -9,7 +9,9 @@ with open(data_path, 'r') as f:
     total_acres = 0
     for state in ag_data:
         cur_id = ag_data[state]['id']
+        cur_name = state
         id_county_acres[cur_id] = {}
+        id_county_acres[cur_id]['state name'] = state
         for county in ag_data[state]:
             if county == 'id':
                 continue
@@ -30,21 +32,11 @@ with open(geo_path, 'r') as geo_f:
             if cur_county in id_county_acres[cur_id]:
                 count += 1
                 feature["properties"]["ACRES"] = id_county_acres[cur_id][cur_county]
+                feature["properties"]["STATE NAME"] = id_county_acres[cur_id]['state name']
 
 print(count)
 print(geo_data["features"][0]["properties"])
 
 output_path = "raw_data/acres_countyLevelGeo.json"
 with open(output_path, 'w') as f:
-    json.dump(geo_data,f,indent=2)
-
-'''
-with open(path, 'r') as f:
-    data = json.load(f)
-    for feature in data["features"]:
-        if feature["properties"]["NAME"].upper() in state_totals:
-            feature["properties"]["ACRES"] = state_totals[feature["properties"]["NAME"].upper()]
-    
-with open(output_path, 'w') as f:
-    json.dump(data,f,indent=4)
-'''
+    json.dump(geo_data,f,indent=1)

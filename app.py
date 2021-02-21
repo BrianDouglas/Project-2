@@ -7,6 +7,10 @@
 
 from flask import Flask, session, request, render_template, jsonify
 import json
+import pymongo
+from py_scripts import bd_config
+
+bd_config.init()
 
 app = Flask(__name__)
 
@@ -39,5 +43,45 @@ def state_geo():
 def map():
     return render_template("map.html")
 
+@app.route("/api/<state>")
+def state_api(state):
+    #make connection
+    connectTo = "ag_data"
+    client = pymongo.MongoClient(f"mongodb+srv://{bd_config.USERNAME}:{bd_config.PASSWORD}@bricluster.yskth.mongodb.net/{connectTo}?retryWrites=true&w=majority")
+    #nav to collection
+    db = client.ag_data
+    records = db.ag_records
+    #process incoming
+    state = state.upper()
+    #run query
+    result = records.find({'state': state}, {"_id": False})
+    result = list(result)
+    #check for no results
+    if len(result) == 0:
+        return jsonify({"ERROR": "STATE does not exist in database, sorry."}), 404
+    #return results
+    return jsonify(result)
+
+@app.route("/api/<state>/<county>")
+def county_api(state, county):
+    #make connection
+    connectTo = "ag_data"
+    client = pymongo.MongoClient(f"mongodb+srv://{bd_config.USERNAME}:{bd_config.PASSWORD}@bricluster.yskth.mongodb.net/{connectTo}?retryWrites=true&w=majority")
+    #nav to collection
+    db = client.ag_data
+    records = db.ag_records
+    #process incoming
+    state = state.upper()
+    county = county.upper()
+    #run query
+    result = records.find({'state': state,'county': county}, {"_id": False})
+    result = list(result)
+    #check for no results
+    if len(result) == 0:
+        return jsonify({"ERROR": "STATE/COUNTY combo does not exist in database, sorry."}), 404
+    #return results
+    return jsonify(result)
+
 if __name__ == "__main__":
+
     app.run(debug=True)
