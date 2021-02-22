@@ -1,8 +1,16 @@
 from flask import Flask, session, request, render_template, jsonify
 import json
 import pymongo
+import os
 
 app = Flask(__name__)
+
+# Check for environment variable
+if not os.getenv("USERNAME"):
+    raise RuntimeError("USERNAME is not set")
+# Check for environment variable
+if not os.getenv("PASSWORD"):
+    raise RuntimeError("PASSWORD is not set")
 
 @app.route("/")
 def index():
@@ -37,7 +45,7 @@ def map():
 def state_api(state):
     #make connection
     connectTo = "ag_data"
-    client = pymongo.MongoClient(f"mongodb+srv://{USERNAME}:{PASSWORD}@bricluster.yskth.mongodb.net/{connectTo}?retryWrites=true&w=majority")
+    client = pymongo.MongoClient(f"mongodb+srv://{os.getenv('USERNAME')}:{os.getenv('PASSWORD')}@bricluster.yskth.mongodb.net/{connectTo}?retryWrites=true&w=majority")
     #nav to collection
     db = client.ag_data
     records = db.ag_records
@@ -56,7 +64,7 @@ def state_api(state):
 def county_api(state, county):
     #make connection
     connectTo = "ag_data"
-    client = pymongo.MongoClient(f"mongodb+srv://{USERNAME}:{PASSWORD}@bricluster.yskth.mongodb.net/{connectTo}?retryWrites=true&w=majority")
+    client = pymongo.MongoClient(f"mongodb+srv://{os.getenv('USERNAME')}:{os.getenv('PASSWORD')}@bricluster.yskth.mongodb.net/{connectTo}?retryWrites=true&w=majority")
     #nav to collection
     db = client.ag_data
     records = db.ag_records
