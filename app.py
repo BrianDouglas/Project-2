@@ -56,7 +56,7 @@ def state_api(state):
 def county_api(state, county):
     #make connection
     connectTo = "ag_data"
-    client = pymongo.MongoClient(f"mongodb+srv://{bd_config.USERNAME}:{bd_config.PASSWORD}@bricluster.yskth.mongodb.net/{connectTo}?retryWrites=true&w=majority")
+    client = pymongo.MongoClient(f"mongodb+srv://{USERNAME}:{PASSWORD}@bricluster.yskth.mongodb.net/{connectTo}?retryWrites=true&w=majority")
     #nav to collection
     db = client.ag_data
     records = db.ag_records
