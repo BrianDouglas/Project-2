@@ -1,10 +1,3 @@
-#use flask file structure
-    #static
-        #js
-        #css
-    #templates
-        #index.html
-
 from flask import Flask, session, request, render_template, jsonify
 import json
 import pymongo
@@ -14,7 +7,7 @@ bd_config.init()
 
 app = Flask(__name__)
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/")
 def index():
     return render_template("index.html")
 
