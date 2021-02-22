@@ -1,9 +1,6 @@
 from flask import Flask, session, request, render_template, jsonify
 import json
 import pymongo
-from py_scripts import bd_config
-
-bd_config.init()
 
 app = Flask(__name__)
 
@@ -40,7 +37,7 @@ def map():
 def state_api(state):
     #make connection
     connectTo = "ag_data"
-    client = pymongo.MongoClient(f"mongodb+srv://{bd_config.USERNAME}:{bd_config.PASSWORD}@bricluster.yskth.mongodb.net/{connectTo}?retryWrites=true&w=majority")
+    client = pymongo.MongoClient(f"mongodb+srv://{USERNAME}:{PASSWORD}@bricluster.yskth.mongodb.net/{connectTo}?retryWrites=true&w=majority")
     #nav to collection
     db = client.ag_data
     records = db.ag_records
