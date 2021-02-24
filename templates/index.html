@@ -29,15 +29,34 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-12" id="map-holder">
+                <div id="map"></div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
                 <div class="well">
                     <h5>State Name:</h5>
                     <select id="stateDataset" onchange="stateChanged(this.value)"></select>
                 </div>
+            </div>
+            <div class="col-md-4">
                 <div class="well">
                     <h5>County Name:</h5>
                     <select id="countyDataset" onchange="countyChanged(this.value)"></select>
                 </div>
+            </div>
+            <div class="col-md-4">
+                <div class="well">
+                    <h5>Sort</h5>
+                    <select id="barHandle" onchange="barChanged(this.value)"></select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title">Agricultural Info</h3>
@@ -45,18 +64,8 @@
                     <div id="sample-metadata" class="panel-body"></div>
                 </div>
             </div>
-            <div class="col-md-10" id="map-holder">
-                <div id="map"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div id="barchart"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div id="sunmap"></div>
+            <div class="col-md-9">
+                <div id="bar"></div>
             </div>
         </div>
     </div>
@@ -72,7 +81,7 @@
     <script type="text/javascript" src="./static/js/choropleth.js"></script>
      <!-- JS  -->
     <script type="text/javascript" src="./static/js/logic.js"></script>
-
+    <script type="text/javascript" src="./static/js/rahwa.js"></script>
 </body>
 
 </html>
