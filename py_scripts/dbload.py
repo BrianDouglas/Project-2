@@ -9,6 +9,7 @@ with open(data_path, 'r') as f:
     data = json.load(f)
     for state in data:
         for county in data[state]:
+            # build a record
             if county == 'id':
                 continue
             record = {}
@@ -17,10 +18,11 @@ with open(data_path, 'r') as f:
             record['ag_usage'] = {} 
             for usage in data[state][county]:
                 record['ag_usage'][usage] = data[state][county][usage]
+            # append to list
             record_list.append(record)
 
-for i in range(10):
-    print(record_list[i])
+#for i in range(10):
+#    print(record_list[i])
 
 
 bd_config.init()
@@ -34,6 +36,3 @@ records = db.ag_records
 records.insert_many(record_list)
 
 client.close()
-
-
-#db.collection.find({}, {"_id": False})

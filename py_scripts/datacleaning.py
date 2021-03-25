@@ -3,6 +3,7 @@ import json
 
 path = "raw_data/agdata by county.csv"
 
+# indicate what index of each row in the csv contains certain data
 STATE_NAME = 5
 STATE_NUM = 6
 COUNTY_NAME = 9
@@ -10,7 +11,7 @@ COUNTY_NUM = 10
 DATA_ITEM = 16
 VALUE = 19
 
-
+# hyphen mistake made here
 items = [('AG LAND, CROPLAND - ACRES','crop_acres'), 
         ('AG LAND, CROPLAND - NUMBER OF OPERATIONS','crop_ops'),
         ('AG LAND, PASTURELAND - ACRES', 'pasture_acres'),
@@ -51,9 +52,12 @@ with open(path) as csvfile:
             clean_dict[row[STATE_NAME]] = {row[COUNTY_NAME]: {map_name(row[DATA_ITEM]): current_value}}
             
 #print(clean_dict["ALASKA"])
-'''with open("raw_data/cleaned_agdata.json", "w") as f:
-    json.dump(clean_dict,f,indent=4)'''
+'''
+with open("raw_data/cleaned_agdata.json", "w") as f:
+    json.dump(clean_dict,f,indent=4)
+'''
 
+# couldn't just do a sum, needed to check if it was an acres datapoint.
 state_totals = {}
 for state in clean_dict:
     total_acres = 0
@@ -66,14 +70,14 @@ print(state_totals)
 # print(len(state_totals))
 # print(state_totals.keys())
 
-'''path = "raw_data/stateLevelGeo.json"
+path = "raw_data/stateLevelGeo.json"
 output_path = "raw_data/acres_stateLevelGeo.json"
 with open(path, 'r') as f:
     data = json.load(f)
     for feature in data["features"]:
         if feature["properties"]["NAME"].upper() in state_totals:
             feature["properties"]["ACRES"] = state_totals[feature["properties"]["NAME"].upper()]
-    
+'''    
 with open(output_path, 'w') as f:
     json.dump(data,f,indent=4)
 '''

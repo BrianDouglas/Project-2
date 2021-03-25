@@ -1,3 +1,5 @@
+# file size issues resolved.
+
 import json
 
 data_path = "raw_data/cleaned_agdata.json"
@@ -21,7 +23,7 @@ with open(data_path, 'r') as f:
                 if data.split("_")[1] == 'acres':
                     total_acres += ag_data[state][county][data]
             id_county_acres[cur_id][county] = total_acres
-print(id_county_acres['02'])
+#print(id_county_acres['02'])
 count = 0
 with open(geo_path, 'r') as geo_f:
     geo_data = json.load(geo_f)
@@ -34,9 +36,13 @@ with open(geo_path, 'r') as geo_f:
                 feature["properties"]["ACRES"] = id_county_acres[cur_id][cur_county]
                 feature["properties"]["STATE NAME"] = id_county_acres[cur_id]['state name']
 
-print(count)
-print(geo_data["features"][0]["properties"])
+#print(count)
+#print(geo_data["features"][0]["properties"])
 
+
+### TALK ABOUT THIS ###
+'''
 output_path = "raw_data/acres_countyLevelGeo.json"
 with open(output_path, 'w') as f:
     json.dump(geo_data,f,indent=1)
+'''
