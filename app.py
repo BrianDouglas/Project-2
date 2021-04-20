@@ -41,6 +41,10 @@ def state_geo():
 def map():
     return render_template("map.html")
 
+@app.route("/api")
+def api():
+    return jsonify({"Endpoints": {"All Counties in a state": "api/<state>", "Single County": "api/<state>/<county>"}})
+
 @app.route("/api/<state>")
 def state_api(state):
     #make connection
