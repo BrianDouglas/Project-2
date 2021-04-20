@@ -6,11 +6,11 @@ import os
 app = Flask(__name__)
 
 # Check for environment variable
-if not os.getenv("USERNAME"):
-    raise RuntimeError("USERNAME is not set")
-# Check for environment variable
-if not os.getenv("PASSWORD"):
-    raise RuntimeError("PASSWORD is not set")
+# if not os.getenv("USERNAME"):
+#     raise RuntimeError("USERNAME is not set")
+# # Check for environment variable
+# if not os.getenv("PASSWORD"):
+#     raise RuntimeError("PASSWORD is not set")
 
 @app.route("/")
 def index():
